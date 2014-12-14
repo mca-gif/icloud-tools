@@ -1,6 +1,6 @@
 # iCloud Recents Deleter
 
-Python script to delete all of the recent contacts in Messages from iCloud
+Python script to delete all of the recents from Messages, Mail and Maps on iCloud
 
 ## Usage
 
