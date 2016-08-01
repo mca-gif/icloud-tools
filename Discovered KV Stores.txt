@@ -1,0 +1,90 @@
+KV Store ID
+- Bundle ID seen accessing store
+
+com.apple.messages.recents
+- com.apple.messages
+
+com.apple.Safari.SyncedTabs
+- com.apple.mobilesafari
+
+com.apple.mobilesafari
+- com.apple.mobilesafari
+
+com.apple.mail.recents
+- com.apple.cloudrecents.CloudRecentsAgent
+
+com.apple.eventkit.locations
+- com.apple.cloudrecents.CloudRecentsAgent
+
+com.apple.passbook.locations
+- com.apple.cloudrecents.CloudRecentsAgent
+
+com.apple.backboardd
+- com.apple.backboardd
+
+com.apple.datamigrator
+- com.apple.datamigrator
+
+com.apple.springboard
+- com.apple.springboard
+
+com.apple.Maps
+- com.apple.Maps
+- com.apple.Maps.Nearby
+
+com.apple.MapsSupport.bookmarks
+- com.apple.Maps
+- com.apple.Maps.Nearby
+
+com.apple.Maps.recents
+- com.apple.Maps
+
+com.apple.MapsSupport.history
+- com.apple.Maps
+
+com.apple.weather
+- com.apple.weather.WeatherAppTodayWidget
+- com.apple.nanoweatherprefsd
+
+com.apple.mobilenotes
+- com.apple.mobilenotes
+- com.apple.mobilenotes.NotesExtension
+- apple.mobilenotes.SharingExtension
+- com.apple.mobilenotes.TodayExtension
+
+com.apple.iMovie
+- F6266T9T75.com.apple.iMovie
+
+com.apple.inputmethod.kbd
+- com.apple.TextInput.kbd
+
+CZ9Q9N9M76.com.grapefrukt.games.twofold
+- com.grapefrukt.games.twofold
+
+com.apple.finder
+- com.apple.CloudDocsUI.DocumentPicker
+
+45SNFQQ3JX.com.zimride.instant
+- com.zimride.instant
+
+7M58W9A799.eu.bandainamcoent.pacman256
+- eu.bandainamcoent.pacman256
+
+com.apple.mobilemail
+- com.apple.mobilemail
+
+com.apple.mail.senderRelevanceRule
+- com.apple.mobilemail
+
+com.apple.mail.conversationRelevanceRule
+- com.apple.mobilemail
+
+com.apple.mail.listUnsubscribeInfo
+- com.apple.mobilemail
+
+
+com.apple.reminders
+- com.apple.reminders
+
+com.apple.iWork
+- com.apple.reminders

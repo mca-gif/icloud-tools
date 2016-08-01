@@ -2,15 +2,16 @@
 https://github.com/hackappcom/iloot"""
 
 from xml.parsers.expat import ExpatError
-from urlparse import urlparse
+from urllib.parse import urlparse
 import plistlib
-import httplib
+import http.client as http
+
 
 class PlistRequester(object):
     """A class to make requesting plist data from a webserver easier"""
-    def __init__(self, url):
+    def __init__(self, url, method="GET"):
         self.url = url
-        self.method = "GET"
+        self.method = method
         self.body = None
         self.headers = {}
         self.data = None
@@ -22,28 +23,31 @@ class PlistRequester(object):
         """Allows adding new values to the headers"""
         self.headers[key] = value
 
-    def plist_data(self):
+    def set_authorization(self, auth_value):
+        self.add_header("Authorization", auth_value)
+
+    def plist_as_dict(self):
         """Makes the network request and returns data"""
         if self.data:
             return self.data
 
         purl = urlparse(self.url)
         if purl.scheme == "https":
-            conn = httplib.HTTPSConnection(purl.hostname, purl.port)
+            conn = http.HTTPSConnection(purl.hostname, purl.port)
         else:
-            conn = httplib.HTTPConnection(purl.hostname, purl.port)
+            conn = http.HTTPConnection(purl.hostname, purl.port)
 
         conn.request(self.method, purl.path, self.body, self.headers)
         response = conn.getresponse()
 
         data = response.read()
         try:
-            self.data = plistlib.readPlistFromString(data)
+            self.data = plistlib.loads(data)
         except ExpatError:
             self.data = None
 
         if response.status != 200:
-            print "Request %s returned code %d" % (self.url, response.status)
+            print("Request %s returned code %d" % (self.url, response.status))
             return None
 
         return self.data

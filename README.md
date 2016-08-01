@@ -1,14 +1,7 @@
-# iCloud Recents Deleter
+# iCloud Tools
 
-Python script to delete all of the recents from Messages, Mail and Maps on iCloud
+## ic_kv.py
+Perform lookups into the iCloud Key-Value store by ID.
 
-## Usage
-
-    icloud-recents-deleter.py [-h] apple_id password
-
-    positional arguments:
-      apple_id    Apple ID
-      password    Password
-
-    optional arguments:
-      -h, --help  show this help message and exit
+## ic_delete_recents.py
+Delete the contents of the recently used lists from Messages, Mail and Maps on iCloud.
